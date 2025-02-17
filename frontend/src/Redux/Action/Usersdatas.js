@@ -28,18 +28,24 @@ export const fetchUsersData = () => async (dispatch) => {
 };
 
 
-export const updateUserData = ( updatedData,userId) => async (dispatch) => {
+export const updateUserData = (updatedData, userId) => async (dispatch) => {
   try {
     const formData = new FormData();
-  console.log(updatedData.file)
 
+    
     if (updatedData.username) {
       formData.append("username", updatedData.username);
     }
-    if (updatedData.userImage) {
-      formData.append("userimage", updatedData.file); 
+
+   
+    if (updatedData.file) {
+      formData.append("file", updatedData.file);
+    } else {
+      console.log("No file selected");
     }
-console.log(formData)
+
+    
+
     const response = await fetch(`${Url}/user/updateprofile/${userId}`, {
       method: "PUT",
       headers: {

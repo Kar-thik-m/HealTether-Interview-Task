@@ -22,13 +22,13 @@ const Update = () => {
     e.preventDefault();
     setLoading(true);
     const userData = { username, file };
-    console.log(userData)
+
     try {
       await dispatch(updateUserData(userData, id));
 
       setUsername("");
       setFile(null);
-      navigate("/");
+      navigate("/"); // Redirect after successful update
     } catch (error) {
       console.error("Error updating profile:", error);
       alert("Failed to update profile. Please try again.");
