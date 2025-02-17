@@ -1,0 +1,87 @@
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .headers button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .headers button:hover {
+    background-color: #cc0000;
+  }
+  
+  .userList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .userCard {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: left;
+    background-color: #f9f9f9;
+  }
+  
+  .userCard h3 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .userCard p {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .userCard img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px auto;
+  }
+  
+  .userCard button {
+    display: block;
+    margin: 10px auto;
+    padding: 6px 12px;
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .userCard button:hover {
+    background-color: #808d9b;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .userList {
+      grid-template-columns: 1fr;
+    }
+  }
+  
